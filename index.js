@@ -568,29 +568,54 @@ const airports = [
 // };
 // myFunction();
 
+let myFunction = () => {
+  console.log("function was inviked")
+}
+
+myFunction();
 
 // let anotherFunction = function (param) {
 //   return param;
 // };
 // anotherFunction("Example");
 
+let anotherFunction = (param) => {
+  return param;
+}
+
+anotherFunction("Example")
 
 // let add = function (param1, param2) {
 //   return param1 + param2;
 // };
 // add(1,2);
 
+let add = (param1, param2) => {
+  return param1 + param2;
+}
+
+add(1,2)
 
 // let subtract = function (param1, param2) {
 //   return param1 - param2;
 // };
 // subtract(1,2);
 
+let subtract = (param1, param2) => {
+  return param1 - param2;
+};
+
+subtract(1,2)
 
 /* Work out 💪 */
 /* TASK 1 🚀 
 // Dollars to Euros - write a function that will take an amount of dollars (USD) and change it  into euros (EUR) - with the current exchange rate 1 USD === .85 EUR */
 
+let dollars = (USD,Euros) => {
+   return Euros = USD
+}
+
+console.log(dollars)
 
 /* TASK 2 🚀 
 // Take the function above a step further - you have dollars and you are visiting the following 5 countries: Britan, Germany, Turkey, Bulgaria and Ukraine - you need to write a function that will take a dollar amount, and a country and return the exchange rate for that country - the function should return a string that says `your exchange rate for dollarAmount dollars in country will be exchangeRate currencyInitals ` If the country is not on your list your string should return 'that country is not on your list'
@@ -600,21 +625,48 @@ const airports = [
 // 1 usd === 1.66 Bulgarian Lev 
 // 1 usd === 27.7 Ukrainian hryvnia */
 
+let dollars = (dollarAmount, country) => {
+ let dollarAmount = 1 ;
+  if(dollarAmount === 0.85){
+    return euro
+  }if(dollarAmount === 0.77){
+    return britishPounds
+  }if(dollarAmount === 6.96){
+    return turkishLira
+  }if(dollarAmount === 1.66){
+    return bulgarianLev
+  }if(dollarAmount === 27.7){
+    return ukrainianHryvnia
+  }else(nothing)
+//   return `your exchange rate for dollarAmount dollars in country will be exchangeRate ${currencyInitals} `
+ }
 
+console.log(dollars)
 /*TASK 3 🚀
 /// Write a function that takes an airport code and returns the city, country of that airport 
 // find the following codes AAA, ABZ, ABX, ABT, ACA */
 
+let code = []; 
+ for(let i = 0,< airports.length ; i++)
+  if(airport === AAA){
+    return `${this.city} ${this.country}`
+  }if(airport === ABZ){
+    return `${this.city} ${this.country}`
+  }if(airport === ABX){
+    return `${this.city} ${this.country}`
+  }if(airport === ABT){
+    return `${this.city} ${this.country}`
+  }if(airport === ACA){
+    return `${this.city} ${this.country}`
+  }
 
+console.log(code)
 /*TASK 4 🚀 
 // Write a function to that will find the phone number for an airport in a given city  */
-
-
+ let number
 
 /*TASK 5 🚀 
 // Write a function that will return all the airports in a given country  */
-
-
 
 /*TASK 6 🚀 
 // Write a function that takes and airport name and returns the airport code
@@ -629,3 +681,16 @@ const airports = [
 
 /*TASK 8 🚀
 // Find out what your flight options are - write a function that returns a new array of all the country names in a set of data*/
+
+function findAirports(array,string){
+  let ports = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].includes(string)){
+      ports.push(array[i])
+    }
+  }
+  return ports;
+}
+
+
+console.log(findAirports(airports,${this.country}))
